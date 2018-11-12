@@ -47,7 +47,7 @@ require( ABSPATH . WPINC . '/functions.wp-styles.php' );
  *
  * @param WP_Scripts $scripts WP_Scripts object.
  */
-function wp_default_scripts( &$scripts ) {
+function wp_default_scripts( $scripts ) {
 	include( ABSPATH . WPINC . '/version.php' ); // include an unmodified $wp_version
 
 	$develop_src = false !== strpos( $wp_version, '-src' );
@@ -668,7 +668,7 @@ function wp_default_scripts( &$scripts ) {
  *
  * @param WP_Styles $styles
  */
-function wp_default_styles( &$styles ) {
+function wp_default_styles( $styles ) {
 	include( ABSPATH . WPINC . '/version.php' ); // include an unmodified $wp_version
 
 	if ( ! defined( 'SCRIPT_DEBUG' ) )
