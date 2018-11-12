@@ -1,0 +1,35 @@
+# Redefine access for admin
+#RewriteRule ^spark-administration$ http://www.sparklinglengua.com/spark-administration/wp-login.php [NC,L]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Protect file wp-config
+<Files wp-config.php>
+ order allow,deny
+ deny from all
+</Files>
+
+# Protect .htaccess file
+<Files .htaccess>
+ order allow,deny 
+ deny from all 
+</Files>
+
+# Protect xmlrpc.php file
+<Files xmlrpc.php>
+ order allow,deny 
+ deny from all 
+</Files>
+
+# Hide sensible repertory
+Options All -Indexes
