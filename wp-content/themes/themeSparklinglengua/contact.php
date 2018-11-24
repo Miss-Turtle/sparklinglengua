@@ -73,28 +73,40 @@ if($recup){
                 printf('<p>%s</p>', stripslashes($line->statuts));
                 switch($pageAncestor){
                     case 'en':
-                        printf('<p>E-mail: <a href="mailto:%s" titre="email">%s</a></p>', 
+                        if(stripslashes($line->email) != null){
+                            printf('<p>E-mail: <a href="mailto:%s" titre="email">%s</a></p>', 
                             stripslashes($line->email), stripslashes($line->email));
+                        }                        
                         break;
                     case 'fr':
-                        printf('<p>E-mail : <a href="mailto:%s" titre="email">%s</a></p>', 
-                            stripslashes($line->email), stripslashes($line->email));
+                        if(stripslashes($line->email) != null){
+                            printf('<p>E-mail : <a href="mailto:%s" titre="email">%s</a></p>', 
+                                stripslashes($line->email), stripslashes($line->email));
+                        }                        
                         break;
                     case 'es':
-                        printf('<p>Email : <a href="mailto:%s" titre="email">%s</a></p>', 
-                            stripslashes($line->email), stripslashes($line->email));
+                        if(stripslashes($line->email) != null){
+                            printf('<p>Email : <a href="mailto:%s" titre="email">%s</a></p>', 
+                                stripslashes($line->email), stripslashes($line->email));
+                        }                        
                         break;
                     case 'de':
-                        printf('<p>E-Mail: <a href="mailto:%s" titre="email">%s</a></p>', 
-                            stripslashes($line->email), stripslashes($line->email));
+                        if(stripslashes($line->email) != null){
+                            printf('<p>E-Mail: <a href="mailto:%s" titre="email">%s</a></p>', 
+                                stripslashes($line->email), stripslashes($line->email));
+                        }                        
                         break;
                     case 'it':
-                        printf('<p>E-mail: <a href="mailto:%s" titre="email">%s</a></p>', 
-                            stripslashes($line->email), stripslashes($line->email));
+                        if(stripslashes($line->email) != null){
+                            printf('<p>E-mail: <a href="mailto:%s" titre="email">%s</a></p>', 
+                                stripslashes($line->email), stripslashes($line->email));
+                        }                        
                         break;
                     case 'nl':
-                        printf('<p>E-mail: <a href="mailto:%s" titre="email">%s</a></p>', 
+                        if(stripslashes($line->email) != null){
+                            printf('<p>E-mail: <a href="mailto:%s" titre="email">%s</a></p>', 
                             stripslashes($line->email), stripslashes($line->email));
+                        }                        
                         break;
                 }              
             print('</div><!-- #detailEmail -->');
